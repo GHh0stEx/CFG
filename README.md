@@ -54,3 +54,16 @@ graph.AddConnectionCurve("N", "M", ConnectionSide.Right);
 graph.AddConnectionCurve("G", "J", ConnectionSide.Left);
 
 graph.EndOfDraw();
+
+
+Example of ProgramText Creation:
+
+string code = "some code";
+
+int offsetV = 40;
+
+master = new ProgramTextMaster(pictureBox2, code, new ProgramTextBrushes(Brushes.Black, Brushes.DarkRed, Brushes.DarkGray));
+
+master.CreateProgramText(offsetV);
+
+master.SaveToBitmap(Environment.CurrentDirectory, "programCode.jpg");
