@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -435,15 +436,35 @@ namespace ControlFlowGraph
             }
         }
 
+        public void SaveToBitmap(string pathToSave, string fileName)
+        {
+            DrawArea.Save(pathToSave + "\\" + fileName + ".jpg", ImageFormat.Jpeg);
+        }
+
         public void EndOfDraw()
         {
             try
             {
                 g.Dispose();
             }
+            catch { }
+        }
+
+        public void Dispose()
+        {
+            try
+            { 
+                NodeSize = Size.Empty;
+                FontSize = 0;
+                PenWidth = 0;
+                Item.Clear();
+                Font.Dispose();
+                DrawArea.Dispose();
+                EndOfDraw();
+            }
             catch (Exception e)
             {
-                throw new Exception("Unable to stop drawing", e);
+                throw new Exception("Unable to dispose data", e);
             }
         }
         #endregion

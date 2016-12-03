@@ -1,0 +1,25 @@
+int main() 
+{
+/* 1 */ int i, j;
+/* 1 */ j=0;
+/* 1 */ i*55-67+j;
+
+	//test construct starts here
+
+/* 1 */ if (true) {
+	/* 2 */ ok1();
+	}
+	else {
+	/* 3 */ ok2();
+	}
+
+/* 4 */ while (true) {
+	/* 5 */ ok1();
+	/* 5 */ ok2();
+	}
+
+	//end of construct
+
+/* 6 */ printf('k');
+/* 6 */ return 0;
+}
