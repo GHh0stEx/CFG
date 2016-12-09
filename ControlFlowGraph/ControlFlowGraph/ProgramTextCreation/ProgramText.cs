@@ -153,15 +153,22 @@ namespace ControlFlowGraph
             {
                 TextType type = TextType.Code;
                 string id = "";
+                bool stringEmpty = false;
 
                 if (regex.IsMatch(Lines[lineIndex]))
                 {
                     type = TextType.Id;
 
                     id = regex.Match(Lines[lineIndex]).Value;
-                    Lines[lineIndex] = regex.Replace(Lines[lineIndex], "\t");
+                    Lines[lineIndex] = regex.Replace(Lines[lineIndex], "");
                     id = id.Replace("/* ", "").Replace(" */", "");
+
+                    if (Lines[lineIndex].Trim() == "")
+                    {
+                        stringEmpty = true;
+                    }
                 }
+                Lines[lineIndex] = Lines[lineIndex].Replace("\t", "    ");
 
                 if (!recursion)
                 {
@@ -182,14 +189,17 @@ namespace ControlFlowGraph
                 }
                 else if (type == TextType.Id)
                 {
-                    g.DrawString(
-                        id,
-                        Font,
-                        Brushes.Id,
-                        iniPosition
-                    );
-
-                    DrawText(lineIndex, iniPosition, true);
+                    if (!stringEmpty)
+                    {
+                        g.DrawString(
+                            id,
+                            Font,
+                            Brushes.Id,
+                            iniPosition
+                        );
+                    
+                        DrawText(lineIndex, iniPosition, true);
+                    }
                 }
                 else
                 {

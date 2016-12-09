@@ -1,0 +1,11 @@
+C:\Users\ТК\Desktop\CFG-master\CFG-master\ControlFlowGraph\TestApp\obj\Release\TestApp.csprojResolveAssemblyReference.cache
+C:\Users\ТК\Desktop\CFG-master\CFG-master\ControlFlowGraph\TestApp\obj\Release\TestApp.TestForm.resources
+C:\Users\ТК\Desktop\CFG-master\CFG-master\ControlFlowGraph\TestApp\obj\Release\TestApp.Properties.Resources.resources
+C:\Users\ТК\Desktop\CFG-master\CFG-master\ControlFlowGraph\TestApp\obj\Release\TestApp.csproj.GenerateResource.Cache
+C:\Users\ТК\Desktop\CFG-master\CFG-master\ControlFlowGraph\TestApp\bin\Release\TestApp.exe.config
+C:\Users\ТК\Desktop\CFG-master\CFG-master\ControlFlowGraph\TestApp\bin\Release\TestApp.exe
+C:\Users\ТК\Desktop\CFG-master\CFG-master\ControlFlowGraph\TestApp\bin\Release\TestApp.pdb
+C:\Users\ТК\Desktop\CFG-master\CFG-master\ControlFlowGraph\TestApp\bin\Release\ControlFlowGraph.dll
+C:\Users\ТК\Desktop\CFG-master\CFG-master\ControlFlowGraph\TestApp\bin\Release\ControlFlowGraph.pdb
+C:\Users\ТК\Desktop\CFG-master\CFG-master\ControlFlowGraph\TestApp\obj\Release\TestApp.exe
+C:\Users\ТК\Desktop\CFG-master\CFG-master\ControlFlowGraph\TestApp\obj\Release\TestApp.pdb
