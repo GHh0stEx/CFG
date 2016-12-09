@@ -56,14 +56,22 @@ graph.AddConnectionCurve("G", "J", ConnectionSide.Left);
 graph.EndOfDraw();
 
 
-Example of ProgramText Creation:
-
-string code = "some code";
+Example of ProgramTextMaster syntax:
 
 int offsetV = 40;
 
-master = new ProgramTextMaster(pictureBox2, code, new ProgramTextBrushes(Brushes.Black, Brushes.DarkRed, Brushes.DarkGray));
+master = new ProgramTextMaster(pictureBox2, CFGParserWrapper.GetParsedCode(), new ProgramTextBrushes(Brushes.Black, Brushes.DarkRed, Brushes.DarkGray));
 
 master.CreateProgramText(offsetV);
 
 master.SaveToBitmap(Environment.CurrentDirectory, "programCode.jpg");
+
+Example of GraphManager syntax:
+
+graph = new CFGraph(PB_Graph, 40);
+
+string cCode = "int main() {\n\tint abc; switch(abc) { case 1:{i++;break;} case 2:{i++;break;} default:{asd--;break;} } \n\treturn 0; }\n";
+
+CFGParserWrapper.SetCodeToParse(cCode);
+
+GraphManager.BuildGraph(graph, CFGParserWrapper.GetPairs());
